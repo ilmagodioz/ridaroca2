@@ -438,6 +438,11 @@ animation: gradient-animation 4s infinite alternate;
     display: -webkit-flex; }
   .menu .navbar-brand .navbar-logo img {
     display: -webkit-flex; }
+@media (max-width: 991px) {
+  .menu .navbar-collapse {
+    max-height: 94vh; }
+    .menu .navbar-collapse.show {
+      overflow: auto; } }
 @media (max-width: 767px) {
   .menu .navbar-collapse {
     max-height: 60vh; } }
@@ -449,7 +454,11 @@ animation: gradient-animation 4s infinite alternate;
   .menu .navbar-nav.nav-dropdown {
     display: -webkit-flex; }
   .menu .navbar-toggleable-sm .navbar-collapse {
-    display: -webkit-flex !important; } }
+    display: -webkit-flex !important; }
+  .menu .collapsed .navbar-collapse {
+    max-height: 94vh; }
+    .menu .collapsed .navbar-collapse.show {
+      overflow: auto; } }
 
 .navbar {
   display: -webkit-flex;
@@ -483,9 +492,15 @@ animation: gradient-animation 4s infinite alternate;
   flex: 1;
   -webkit-flex: 1; }
 
+.form-group:focus {
+  outline: none; }
+
 .jq-selectbox__select {
-  padding: 1.07em .5em;
+  padding: 1rem;
   position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
   top: 0;
   left: 0;
   width: 100%; }
@@ -500,6 +515,24 @@ animation: gradient-animation 4s infinite alternate;
   transform: translateY(-50%); }
 
 .jq-selectbox li {
-  padding: 1.07em .5em; }
+  padding: 1rem; }
+
+input[type="range"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.modal-dialog, .modal-content {
+  height: 100%; }
+
+.modal-dialog .carousel-inner {
+  height: 100%;
+  height: -webkit-fill-available;
+  height: fill-available; }
+
+.carousel-item {
+  text-align: center; }
+
+.carousel-item img {
+  margin: auto; }
 
 /*# sourceMappingURL=style.css.map */
